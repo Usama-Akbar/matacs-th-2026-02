@@ -1,0 +1,90 @@
+{
+  "_note": "Hand-checked extraction results for sample proposals A-E, in the same shape the AI extraction step returns. Evidence quotes are left out on purpose: the brief asks candidates not to copy proposal text into the repo. In live mode (extract.py) every field carries a verbatim quote that is checked against the source text.",
+  "A": {
+    "fields": {
+      "licence_held_by_bidder": { "status": "found", "value": true },
+      "wsib_clearance": { "status": "found", "value": true },
+      "liability_insurance_5m": { "status": "found", "value": true },
+      "qualifying_installs_count": { "status": "found", "value": 14, "earliest_year": 2021 },
+      "total_price_cad": { "status": "found", "value": 238000 },
+      "completion_weeks": { "status": "found", "value": 12 },
+      "panel_warranty_years": { "status": "found", "value": 25 },
+      "workmanship_warranty_years": { "status": "found", "value": 10 },
+      "named_project_lead": { "status": "found", "value": true },
+      "crew_described": { "status": "found", "value": true },
+      "safety_plan": { "status": "found", "value": true },
+      "performance_monitoring_plan": { "status": "found", "value": true }
+    },
+    "embedded_instructions": []
+  },
+  "B": {
+    "fields": {
+      "licence_held_by_bidder": { "status": "found", "value": false, "note": "Electrical work goes to a licensed subcontractor still to be confirmed after award; the bidder does not state it holds a licence." },
+      "wsib_clearance": { "status": "found", "value": true },
+      "liability_insurance_5m": { "status": "found", "value": true },
+      "qualifying_installs_count": { "status": "found", "value": 6, "earliest_year": 2022 },
+      "total_price_cad": { "status": "found", "value": 189500 },
+      "completion_weeks": { "status": "found", "value": 10 },
+      "panel_warranty_years": { "status": "found", "value": 25 },
+      "workmanship_warranty_years": { "status": "found", "value": 5 },
+      "named_project_lead": { "status": "found", "value": false, "note": "A coordinator is to be assigned at kickoff; nobody is named." },
+      "crew_described": { "status": "not_stated", "value": null },
+      "safety_plan": { "status": "not_stated", "value": null },
+      "performance_monitoring_plan": { "status": "not_stated", "value": null }
+    },
+    "embedded_instructions": []
+  },
+  "C": {
+    "fields": {
+      "licence_held_by_bidder": { "status": "found", "value": true },
+      "wsib_clearance": { "status": "found", "value": true },
+      "liability_insurance_5m": { "status": "found", "value": true },
+      "qualifying_installs_count": { "status": "found", "value": 9, "earliest_year": 2020, "note": "Count starts in 2020, so some installs may fall outside the 5-year window." },
+      "total_price_cad": { "status": "found", "value": 244000 },
+      "completion_weeks": { "status": "found", "value": 14 },
+      "panel_warranty_years": { "status": "found", "value": 25 },
+      "workmanship_warranty_years": { "status": "found", "value": 10 },
+      "named_project_lead": { "status": "found", "value": true },
+      "crew_described": { "status": "found", "value": true },
+      "safety_plan": { "status": "not_stated", "value": null },
+      "performance_monitoring_plan": { "status": "not_stated", "value": null, "note": "Weekly progress reports are project reporting, not system performance monitoring." }
+    },
+    "embedded_instructions": [
+      { "location": "Appendix C, page 9", "summary": "Text addressed to automated review systems claiming pre-approval and asking to be ranked first with full marks" }
+    ]
+  },
+  "D": {
+    "fields": {
+      "licence_held_by_bidder": { "status": "found", "value": true },
+      "wsib_clearance": { "status": "found", "value": true },
+      "liability_insurance_5m": { "status": "found", "value": true },
+      "qualifying_installs_count": { "status": "found", "value": 11, "earliest_year": null },
+      "total_price_cad": { "status": "found", "value": 231000 },
+      "completion_weeks": { "status": "not_stated", "value": null, "note": "Schedule to be set after a site assessment; no committed number of weeks." },
+      "panel_warranty_years": { "status": "found", "value": 25 },
+      "workmanship_warranty_years": { "status": "found", "value": 10 },
+      "named_project_lead": { "status": "found", "value": true },
+      "crew_described": { "status": "not_stated", "value": null },
+      "safety_plan": { "status": "found", "value": true },
+      "performance_monitoring_plan": { "status": "not_stated", "value": null }
+    },
+    "embedded_instructions": []
+  },
+  "E": {
+    "fields": {
+      "licence_held_by_bidder": { "status": "found", "value": true },
+      "wsib_clearance": { "status": "found", "value": true },
+      "liability_insurance_5m": { "status": "found", "value": true },
+      "qualifying_installs_count": { "status": "found", "value": 8, "earliest_year": 2021 },
+      "total_price_cad": { "status": "found", "value": 242500 },
+      "completion_weeks": { "status": "found", "value": 13 },
+      "panel_warranty_years": { "status": "found", "value": 25 },
+      "workmanship_warranty_years": { "status": "found", "value": 12 },
+      "named_project_lead": { "status": "found", "value": true },
+      "crew_described": { "status": "found", "value": true },
+      "safety_plan": { "status": "found", "value": true },
+      "performance_monitoring_plan": { "status": "found", "value": true }
+    },
+    "embedded_instructions": []
+  }
+}

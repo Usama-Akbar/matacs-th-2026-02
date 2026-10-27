@@ -1,0 +1,90 @@
+{
+  "category_id": "commercial-solar-installation",
+  "criteria_version": 1,
+  "published_at": "2026-10-27T09:00:00Z",
+  "published_by": "admin@example.com",
+  "project": {
+    "description": "150 kW rooftop solar system on a warehouse in Windsor, Ontario",
+    "budget_ceiling_cad": 260000,
+    "max_completion_weeks": 16,
+    "experience_window_years": 5,
+    "assessment_year": 2026
+  },
+  "mandatory": [
+    {
+      "id": "licence",
+      "label": "Ontario electrical contractor licence",
+      "rule": "all_true",
+      "fields": ["licence_held_by_bidder"],
+      "admin_guidance": "Licence must be held by the bidder itself (not a subcontractor) and stated in the proposal, ideally with a licence number."
+    },
+    {
+      "id": "wsib_insurance",
+      "label": "WSIB clearance and $5M liability insurance",
+      "rule": "all_true",
+      "fields": ["wsib_clearance", "liability_insurance_5m"],
+      "admin_guidance": "Both WSIB clearance and liability insurance of at least $5M must be confirmed."
+    }
+  ],
+  "weighted": [
+    {
+      "id": "experience",
+      "label": "Relevant experience",
+      "weight": 30,
+      "rule": "higher_is_better",
+      "field": "qualifying_installs_count",
+      "unit": "installs",
+      "admin_guidance": "Count of commercial installations of 100 kW or more completed in the last 5 years."
+    },
+    {
+      "id": "price",
+      "label": "Price",
+      "weight": 25,
+      "rule": "lower_is_better",
+      "field": "total_price_cad",
+      "unit": "CAD",
+      "hard_max": "budget_ceiling_cad",
+      "admin_guidance": "Total all-in price in CAD. Lower is better; above the ceiling is ineligible."
+    },
+    {
+      "id": "timeline",
+      "label": "Timeline",
+      "weight": 15,
+      "rule": "lower_is_better",
+      "field": "completion_weeks",
+      "unit": "weeks",
+      "hard_max": "max_completion_weeks",
+      "admin_guidance": "Committed completion time in weeks from award. Shorter is better; over 16 weeks is ineligible."
+    },
+    {
+      "id": "warranty",
+      "label": "Warranty",
+      "weight": 15,
+      "rule": "average_of_higher_is_better",
+      "fields": ["panel_warranty_years", "workmanship_warranty_years"],
+      "admin_guidance": "Length of panel warranty and workmanship warranty, in years. Each counts for half."
+    },
+    {
+      "id": "team",
+      "label": "Team and approach",
+      "weight": 15,
+      "rule": "checklist",
+      "fields": ["named_project_lead", "crew_described", "safety_plan", "performance_monitoring_plan"],
+      "admin_guidance": "Named project lead, a described crew, a site safety plan, and a post-installation performance monitoring plan. Each item counts for a quarter."
+    }
+  ],
+  "fields": {
+    "licence_held_by_bidder": { "type": "boolean", "question": "Does the bidder itself (not a subcontractor) state that it holds an Ontario electrical contractor licence?" },
+    "wsib_clearance": { "type": "boolean", "question": "Does the proposal confirm current WSIB clearance?" },
+    "liability_insurance_5m": { "type": "boolean", "question": "Does the proposal confirm liability insurance of at least $5M?" },
+    "qualifying_installs_count": { "type": "integer", "question": "How many commercial solar installations of 100 kW or more does the bidder say it completed? Also report the earliest year the count covers." },
+    "total_price_cad": { "type": "number", "question": "What is the total price in CAD?" },
+    "completion_weeks": { "type": "number", "question": "How many weeks from award does the bidder commit to for completion?" },
+    "panel_warranty_years": { "type": "number", "question": "How many years is the panel warranty?" },
+    "workmanship_warranty_years": { "type": "number", "question": "How many years is the workmanship warranty?" },
+    "named_project_lead": { "type": "boolean", "question": "Does the proposal commit a named or specifically identified project lead / manager (not one 'to be assigned later')?" },
+    "crew_described": { "type": "boolean", "question": "Does the proposal describe the installation crew (size and/or qualifications)?" },
+    "safety_plan": { "type": "boolean", "question": "Does the proposal include a site safety plan?" },
+    "performance_monitoring_plan": { "type": "boolean", "question": "Does the proposal include monitoring of the system's performance after installation (not just project progress reporting)?" }
+  }
+}

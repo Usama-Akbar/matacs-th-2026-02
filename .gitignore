@@ -1,0 +1,7 @@
+.env
+__pycache__/
+.venv/
+prototype/out/
+# Proposal text stays local; the brief asks us not to commit it.
+prototype/samples/*
+!prototype/samples/README.md
