@@ -1,5 +1,6 @@
 {
   "category_id": "commercial-solar-installation",
+  "category_label": "Commercial Solar Installation",
   "criteria_version": 1,
   "published_at": "2026-10-27T09:00:00Z",
   "published_by": "admin@example.com",
@@ -77,7 +78,7 @@
     "licence_held_by_bidder": { "type": "boolean", "question": "Does the bidder itself (not a subcontractor) state that it holds an Ontario electrical contractor licence?" },
     "wsib_clearance": { "type": "boolean", "question": "Does the proposal confirm current WSIB clearance?" },
     "liability_insurance_5m": { "type": "boolean", "question": "Does the proposal confirm liability insurance of at least $5M?" },
-    "qualifying_installs_count": { "type": "integer", "question": "How many commercial solar installations of 100 kW or more does the bidder say it completed? Also report the earliest year the count covers." },
+    "qualifying_installs_count": { "type": "integer", "question": "How many commercial solar installations of 100 kW or more does the bidder say it completed? Also report the earliest year the count covers.", "extra_properties": { "earliest_year": "integer" } },
     "total_price_cad": { "type": "number", "question": "What is the total price in CAD?" },
     "completion_weeks": { "type": "number", "question": "How many weeks from award does the bidder commit to for completion?" },
     "panel_warranty_years": { "type": "number", "question": "How many years is the panel warranty?" },
